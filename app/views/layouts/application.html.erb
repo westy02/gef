@@ -55,46 +55,12 @@
         </div>
       </div>
     </div>
-    <div class="jumbotron masthead">
-    	<div class="container">
-    		<%= yield :header%>
-    		    	
-    </div>
-   </div>
-
-    <div class="container">
-        <div class="row">
-          <div class="span12">
-          	  <div class="tab-content">
-    <div class="tab-pane active" id="concrete">
-  	<%= render :partial => 'concrete' %>
     
-  	</div>
-  
-  <div class="tab-pane" id="timber">
-  	<%= render :partial => 'timber' %>
-  	</div>
-  	
-  	</br>
-  	
-  	<div class="tab-pane" id="floorcoverings">
-  	<%= render :partial => 'floorcoverings' %>
-  	</div>
-  	</br>
-  	
-  	<div class="tab-pane" id="wetareas">
-  	<%= render :partial => 'wetareas' %>
-  	</div>
-  	</br>
-  
-    	</div>
+
+    
             <%= bootstrap_flash %>
             <%= yield %>
-          </div>
          
-        </div><!--/row-->
-        </div> <!-- /container -->
-
       <footer>
         <p>&copy; Company 2013</p>
       </footer>
