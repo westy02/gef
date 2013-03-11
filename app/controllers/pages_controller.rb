@@ -3,6 +3,22 @@ class PagesController < ApplicationController
   def index
    
   end
+  
+  def concrete
+   
+  end
+  
+  def timber
+   
+  end
+  
+  def vinyl
+   
+  end
+  
+  def carpet
+   
+  end
 
   def about  
    
