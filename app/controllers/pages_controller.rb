@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
  
   def index
-   
+    @categories = Category.all
   end
   
   def concrete
@@ -26,6 +26,10 @@ class PagesController < ApplicationController
     
   def contact
     @title = "Contact"
+  end
+  
+  def admin
+    
   end
   
   #def help

@@ -63,10 +63,9 @@
           <div class="container nav-collapse">
             <ul class="nav">
               <li><%= link_to "Home", "/"  %></li>	
-              <li><%= link_to "Concrete", "/concrete"  %></li>
-              <li><%= link_to "Timber", "/timber"  %></li>
-              <li><%= link_to "Vinyl", "/vinyl"  %></li>
-              <li><%= link_to "Carpet", "/carpet"  %></li>
+              <% Category.all.each do |category| %>
+              <li><%= link_to category.name, category_path(category) %></li>	
+              <%end%>
               
               
                </ul>
@@ -94,12 +93,12 @@
 <div class="container">
         <div class="row">
          
-          <div class="span2">
+          <div class="span3">
             <div class="well sidebar-nav" id="sidebar">
              <%= yield :sidebar%>
             </div><!--/.well -->
           </div><!--/span-->
-          <div class="span10">
+          <div class="span9">
             <%= bootstrap_flash %>
             <%= yield %>
           </div>

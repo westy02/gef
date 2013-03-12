@@ -1,6 +1,12 @@
 GEFL::Application.routes.draw do
   
   
+  resources :services
+
+
+  resources :categories
+
+
   get "pages/index"
   get "pages/about"
   get "pages/contact"
@@ -8,7 +14,7 @@ GEFL::Application.routes.draw do
   get "pages/timber"
   get "pages/vinyl"
   get "pages/carpet"
-  #get "pages/help"
+  get "pages/admin"
   
   match '/',  :to => 'pages#index'
   match '/about',  :to => 'pages#about'
@@ -17,7 +23,7 @@ GEFL::Application.routes.draw do
   match '/timber', :to => 'pages#timber'
   match '/vinyl', :to => 'pages#vinyl'
   match '/carpet', :to => 'pages#carpet'
-  #match '/help',    :to => 'pages#help'
+  match '/admin',    :to => 'pages#admin'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
