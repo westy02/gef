@@ -1,11 +1,33 @@
 <%content_for :sidebar do%>
 
 <ul class="nav nav-list">
-	<li class="nav-header">Services</li>
+	<li class="nav-header">Our Services</li>
 	<% @categories.each do |category| %>
   <li><%= link_to category.name, category_path(category) %></li>
   <%end%>
 </ul>
   <%end%>
+  
+  <br />
 
- This is the Home page
+  	<div class="row">
+   <p class="lead">Welcome to Ground Effects Flooring where quality meets the floor...</p>
+  </div>
+  
+
+  
+  <ul class="thumbnails">
+  	<% @categories.each do |category| %>
+  <li class="span5">
+    <div class="thumbnail">
+    	
+      <img data-src="<%= image_tag "timber_thumb.png"%>
+      <h3><%=category.name%></h3>
+      <p>Thumbnail caption...</p>
+     
+    </div>
+  </li>
+  <%end%>
+</ul>
+
+
