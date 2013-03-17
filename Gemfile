@@ -9,7 +9,7 @@ gem 'rails', '3.2.12'
 gem 'pg'
 gem "less-rails"
 gem 'thin'
-gem "carrierwave"
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +19,7 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'jquery-ui-rails'
   gem 'sass-rails',   '~> 3.2.3'
+  gem "carrierwave"
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
    gem 'therubyracer', :platforms => :ruby
