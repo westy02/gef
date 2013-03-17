@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
  
   def index
+    @title = "Home"
     @categories = Category.order("id asc")
   end
   
