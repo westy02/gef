@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
  
   def index
-    @categories = Category.all
+    @categories = Category.order("id asc")
   end
   
   def concrete

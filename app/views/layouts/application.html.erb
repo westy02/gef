@@ -38,27 +38,30 @@
       	<div class="container pull-left ">
       		<a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
           </a>
           <div class="container nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Home", "/"  %></li>	
-              <% Category.all.each do |category| %>
-              <li><%= link_to category.name, category_path(category) %></li>	
-              <%end%>
-              
-              
-               </ul>
+          	<a class="brand" href="/">Home</a>
+               <ul class="nav">
+             	<% Category.order("id asc").each do |category| %>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%=category.name%>	
+              <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+    	<% category.services.each do |service| %>
+      <li><%= link_to service.name, service_path(service) %></li>
+      <%end%>
+    </ul>
+  </li>
+  <%end%>
+</ul>
               
           </div><!--/.nav-collapse -->
         </div>
               
         <div class="container pull-right">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
           <div class="container nav-collapse">
@@ -75,18 +78,8 @@
     </div>
     
 <div class="container">
-        <div class="row">
-        	<div class="span12">
-          <div class="span8">
-       
+        <div class="row">     
             <%= yield %>
-          </div>
-          <div class="span3">
-            <div class="well sidebar-nav">
-             <%= yield :sidebar%>
-            </div><!--/.well -->
-          </div><!--/span-->
-          </div>
           </div><!--/row-->
   </div> <!-- /container -->
          

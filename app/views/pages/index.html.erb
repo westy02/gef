@@ -1,12 +1,4 @@
-<%content_for :sidebar do%>
 
-<ul class="nav nav-list">
-	<li class="nav-header">Our Services</li>
-	<% @categories.each do |category| %>
-  <li><%= link_to category.name, category_path(category) %></li>
-  <%end%>
-</ul>
-  <%end%>
   
   <br />
 
@@ -15,19 +7,17 @@
 
   
 
-  
+  <div class="row">
   <ul class="thumbnails">
   	<% @categories.each do |category| %>
   <li class="span3">
     <div class="thumbnail">
-    	
-      <img data-src="<%= image_tag "timber_thumb.png"%>
+      <img " alt=""><%= image_tag category.image_url.to_s%>
       <h3><%=category.name%></h3>
       <p>Thumbnail caption...</p>
-     
     </div>
   </li>
   <%end%>
 </ul>
-
+</div>
 

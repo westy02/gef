@@ -1,6 +1,6 @@
 <%content_for :sidebar do%>
 
-<ul class="nav nav-list">
+<ul class="nav">
 	<li class="nav-header"><%= @category.name%></li>
 	<% @services.each do |service| %>
   <li><%= link_to service.name, service_path(service) %></li>
@@ -19,6 +19,8 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @category.description %></dd>
 </dl>
+
+ <img data-src="<%= image_tag @category.image_url.to_s%>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

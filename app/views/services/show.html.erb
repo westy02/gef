@@ -1,6 +1,6 @@
 <%content_for :sidebar do%>
 
-<ul class="nav nav-list">
+<ul class="nav">
 	<li class="nav-header"><%= @category.name%></li>
 	<% @services.each do |service| %>
   <li><%= link_to service.name, service_path(service) %></li>
