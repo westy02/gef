@@ -19,6 +19,10 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'jquery-ui-rails'
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'carrierwave'
+  gem 'carrierwave_direct'
+  gem 'fog'
+
 
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
