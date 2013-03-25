@@ -12,7 +12,7 @@
   	<% @categories.each do |category| %>
   <li class="span3">
     <div class="thumbnail">
-     <img " alt="">
+     <img <%= image_tag category.image_url.to_s %>
       <h3><%=category.name%></h3>
       <p>Thumbnail caption...</p>
     </div>
