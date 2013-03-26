@@ -1,4 +1,7 @@
 class ServicesController < ApplicationController
+  
+  http_basic_authenticate_with :name => ENV["ADMIN_NAME"], :password => ENV["ADMIN_PASS"], :except => [:show]
+  
   # GET /services
   # GET /services.json
   def index
