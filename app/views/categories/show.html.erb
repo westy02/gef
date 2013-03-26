@@ -1,17 +1,10 @@
-<%content_for :sidebar do%>
-
-<ul class="nav">
-	<li class="nav-header"><%= @category.name%></li>
-	<% @services.each do |service| %>
-  <li><%= link_to service.name, service_path(service) %></li>
-  <%end%>
-</ul>
-  <%end%>
-
 <%- model_class = Category -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
+
+
+<img <%= image_tag category.image_url.to_s %>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
