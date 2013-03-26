@@ -22,7 +22,7 @@ group :assets do
   gem 'carrierwave'
   gem 'carrierwave_direct'
   gem 'fog'
-
+  gem 'rmagick'
 
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
