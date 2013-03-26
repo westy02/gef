@@ -14,7 +14,7 @@
     <div class="thumbnail">
      <img <%= image_tag category.image_url(:thumb).to_s %>
       <h3><%=category.name%></h3>
-      <p>Thumbnail caption...</p>
+      <p><%=category.description%></p>
     </div>
   </li>
   <%end%>
