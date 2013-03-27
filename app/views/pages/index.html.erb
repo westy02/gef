@@ -14,7 +14,11 @@
     <div class="thumbnail">
      <img <%= image_tag category.image_url(:thumb).to_s %>
       <h3><%=category.name%></h3>
-      <p><%=category.description%></p>
+      	<ul class="nav nav-list">
+  <% category.services.each do |service| %>
+      <li><%= link_to service.name, service_path(service) %></li>
+      <%end%>
+</ul>
     </div>
   </li>
   <%end%>
