@@ -3,14 +3,9 @@
   <h1><%= @service.name %></h1>
 </div>
 
-<div class="span3">
-  <p><%= @service.description %></p>
-  </div>
-  <div class="span9">
-  <img <%= image_tag @service.image_url.to_s %>
 
-</div>
-<br />
+  <p><%= @service.description %></p>
+  <img class="img-rounded "<%= image_tag @service.image_url.to_s %>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
