@@ -21,10 +21,7 @@ class PagesController < ApplicationController
     
   end
   
-  #def help
-   # @title= "help"
-  #end
-  
+ 
   
   
  end
