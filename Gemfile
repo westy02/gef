@@ -9,6 +9,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem "less-rails"
 gem 'thin'
+gem 'activeadmin'
 
 
 # Gems used only for assets and not required
